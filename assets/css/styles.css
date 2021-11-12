@@ -1,6 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
+
+
 }
 
 .heading{
@@ -38,4 +37,55 @@ a{
 .contact-info{
     padding-top: 20px;
     min-height: 100px;
+}
+=======
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header styles */
+header{
+    padding: 20px 35px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+header h1{
+    font-weight: bold;
+    font-size: 36px;
+    margin-right: auto;
+    
+}
+
+header div{
+    margin: auto;
+}
+header a {
+    text-decoration: none;
+    font-style: none;
+}
+
+header nav{
+    margin: 7px 0;
+}
+
+header nav ul {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 20px;
+
 }
