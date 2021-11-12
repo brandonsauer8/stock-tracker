@@ -17,10 +17,11 @@
   <body>
     <!--Navigation Bar. Add link for fontawesome, api-->
     <header>
-      <h1>
+      <h1 class="heading">
         <a href="./index.html"> Stock Tracker </a>
       </h1>
-      <nav>
+
+      <nav class="main-nav">
         <ul>
           <li>
             <a href="#stock-price"> Stock Price</a>
@@ -33,7 +34,28 @@
           </li>
         </ul>
       </nav>
+
+      <h2 class="stock-news"></h2>
     </header>
+
+    <footer class="footer-main"> 
+        <h3 class="subscribe-here">Subscribe for latest updates</h3>
+
+        <div class="contact-info">
+        <p>Enter Email
+         <input type="email" id="email"
+         pattern=".+@globex\.com" size="30" required></p>
+
+         <p>Phone Number
+             <input type="text" id="number">
+         </p>
+
+         <p>
+             <input type="submit" value="Send Request">
+            </p>
+        </div>
+
+    </footer>
 
     <!-- TESTING ---- Stock Chart--> 
     <!--<section>
@@ -46,6 +68,7 @@
             </p>
         </div>
     </section> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    text-align: center;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+}
+
+.main-nav > ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    border: 1px solid lightcoral;
+    background-color: lightcoral;
+}
+
+.main-nav > ul > li{
+    display: inline-block; 
+}
+
+a{
+    text-decoration: none;
+}
+
+.stock-news{
+    border:1px solid lightblue;
+    min-height: 600px;
+    background-color: lightblue;
+}
+
+.footer-main{
+    text-align: center;
+}
+
+.contact-info{
+    padding-top: 20px;
+    min-height: 100px;
+}
