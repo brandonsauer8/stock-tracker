@@ -50,8 +50,3 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 20px;
 }
-
-header nav ul li a:hover {
-    border-radius: 15px;
-    text-shadow: none;
-}
