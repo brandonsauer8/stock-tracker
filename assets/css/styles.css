@@ -49,4 +49,14 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 20px;
+<<<<<<< HEAD
 }
+=======
+}
+
+header nav ul li a:hover {
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+>>>>>>> b127669316b2b85fb619251c074dfd71a5744075
