@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
 
+    <link rel="stylesheet" 
+    href="https://unpkg.com/spectre.css/dist/spectre.min.css"/>
+
+    <link rel="stylesheet" 
+    href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"/>
+
+    <link rel="stylesheet" 
+    href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"/>
+
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    
     <link rel="stylesheet" href="assets/css/styles.css" />
+
     <title>Stock Tracker</title>
   </head>
+
   <body>
     <!--Navigation Bar. Add link for fontawesome, api-->
-    <header>
+    <header class="container-fluid text-center text-white bg-dark p-5">
       <h1 class="heading">
         <a href="./index.html"> Stock Tracker </a>
       </h1>
         <ul>
-          <li>
-            <a href="#stock-price"> Stock Price</a>
-          </li>
-          <li>
-            <a href="#stock-chart"> Stock Chart</a>
-          </li>
-          <li>
-            <a href="#stock-news"> Stock News</a>
-          </li>
+          <div class="container-fluid">
+            <div class="row">
+              <aside class="col-lg-3 bg-light">
+                <h5 class="mt-1">Search:</h5>
+                <div class="form-inline form-group">
+                  <input class="form-control" type="text" id="search-value"/>
+                  <button class="btn btn-primary"><i class="icon icon-arrow-left"></i> GO</button>
+                </div>
+              
+            </div>
+          </div>
         </ul>
+        </li>
       </nav>
 
       <h2 class="stock-news"></h2>
-    </header>
 
     <footer class="footer-main"> 
         <h3 class="subscribe-here">Subscribe for latest updates</h3>
@@ -67,7 +66,7 @@
 
     </footer>
 
-    <!-- TESTING ---- Stock Chart--> 
+    <!------ Stock Chart--> 
     <!--<section>
         <div>
             <h2> Instructions:</h2>
@@ -80,6 +79,9 @@
     </section> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/script.js"></script>
+    
+
+
   </body>
 </html>
 

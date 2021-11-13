@@ -1,7 +1,7 @@
 .heading{
     text-align: center;
-    border: 1px solid lightblue;
-    background-color: lightblue;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
 }
 
 .main-nav > ul > li{
@@ -30,3 +30,5 @@ a{
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
