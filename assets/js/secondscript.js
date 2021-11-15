@@ -5,6 +5,7 @@ $(document).ready(function () {
     $("#search-value").val("");
 
     searchStock(searchValue);
+    alert('sds')
   });
 });
 

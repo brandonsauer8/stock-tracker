@@ -15,3 +15,15 @@ axios
   .catch(function (error) {
     console.error(error);
   });
+
+
+
+function initRun(){
+  $("#search-button").on("click", function () {
+    let val = $("#search-value").val()
+    window.location = 'stock-detail.html?q='+ val
+  
+  });
+}
+
+  $(document).ready(initRun());
