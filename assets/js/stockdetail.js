@@ -16,7 +16,7 @@ function fetchStockDetails(stockName) {
     url: "https://yfapi.net/v6/finance/quote",
     params: { region: "us", lang: "en", symbols: stockName },
     headers: {
-      "x-api-key": "YvOamXCJ3f9vTVoV8zbHk3xtPqkf6K8x2aR22hXt",
+      "x-api-key": "XqHD0VzaV3InJ7ayecPd7DPJPwE6GoK7VDiJhmH1",
     },
   }
 
