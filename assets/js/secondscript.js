@@ -6,7 +6,7 @@ var options = {
   url: 'https://yfapi.net/v1/finance/trending/US',
   params: {modules: 'defaultKeyStatistics,assetProfile'},
   headers: {
-    'x-api-key': 'YvOamXCJ3f9vTVoV8zbHk3xtPqkf6K8x2aR22hXt'
+    'x-api-key': 'yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk'
   }
 };
 
