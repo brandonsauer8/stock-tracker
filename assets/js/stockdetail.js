@@ -1,6 +1,6 @@
-let apiKey = '2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5'
+let apiKey = "2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5"
 
-// EXTRA API KEYS 
+// EXTRA API KEYS
 // 2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5
 // YvOamXCJ3f9vTVoV8zbHk3xtPqkf6K8x2aR22hXt
 // XqHD0VzaV3InJ7ayecPd7DPJPwE6GoK7VDiJhmH1
@@ -22,7 +22,11 @@ function fetchStockDetails(stockName) {
     url: "https://yfapi.net/v6/finance/autocomplete",
     params: { region: "us", lang: "en", query: stockName },
     headers: {
+<<<<<<< HEAD
       "x-api-key": "2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5",
+=======
+      "x-api-key": "yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk",
+>>>>>>> 9b9298754428c65e710cbe5368841c5894fb3c50
     },
   }
 
@@ -30,7 +34,7 @@ function fetchStockDetails(stockName) {
     .request(options)
     .then(function (response) {
       console.log(response.data)
-      if( response.data.ResultSet.Result.length > 0){
+      if (response.data.ResultSet.Result.length > 0) {
         let myData = response.data.ResultSet.Result[0]
         bringExtraStockDetails(myData.symbol)
       }
@@ -40,28 +44,27 @@ function fetchStockDetails(stockName) {
     })
 }
 
-function bringExtraStockDetails(stockSymbol){
-    var options = {
-        method: "GET",
-        url: "https://yfapi.net/v6/finance/quote",
-        params: { region: "us", lang: "en", symbols: stockSymbol },
-        headers: {
-          "x-api-key": apiKey,
-        },
-      }
-    
-      axios
-        .request(options)
-        .then(function (response) {
-          console.log(response.data)
-            let myData = response.data.quoteResponse.result[0]
-            printStockDetails(myData)
-        })
-        .catch(function (error) {
-          console.error(error)
-        })
-}
+function bringExtraStockDetails(stockSymbol) {
+  var options = {
+    method: "GET",
+    url: "https://yfapi.net/v6/finance/quote",
+    params: { region: "us", lang: "en", symbols: stockSymbol },
+    headers: {
+      "x-api-key": apiKey,
+    },
+  }
 
+  axios
+    .request(options)
+    .then(function (response) {
+      console.log(response.data)
+      let myData = response.data.quoteResponse.result[0]
+      printStockDetails(myData)
+    })
+    .catch(function (error) {
+      console.error(error)
+    })
+}
 
 function printStockDetails(data) {
   $(".stock-details").html(

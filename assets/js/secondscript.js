@@ -1,4 +1,4 @@
-let apiKey = '2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5'
+let apiKey = 'yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk'
 
 $(document).ready(getValue)
 
@@ -16,7 +16,7 @@ var options = {
   url: 'https://yfapi.net/v1/finance/trending/US',
   params: { region: "us", lang: "en", query: stockName},
   headers: {
-    'x-api-key': '2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5'
+    'x-api-key': 'yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk'
   }
 };
 
