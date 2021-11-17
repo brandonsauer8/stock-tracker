@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 // fetching data from polygon API
 var fetchNews = () => {
-    var apiCurrent = "https://api.polygon.io/v2/reference/news?apiKey=WUhXPjX2roHFdCHXADtS37dJ9ezEDXwB";
+    var apiCurrent = "https://api.polygon.io/v2/reference/news?limit=10&apiKey=WUhXPjX2roHFdCHXADtS37dJ9ezEDXwB";
 
     fetch(apiCurrent).then(function (response) {
         if (response.ok) {
@@ -17,27 +17,35 @@ var fetchNews = () => {
 };
 
 // creating links of news articles pulled from API
-var displayNews = function(newsArticles) {
-    $(".news-links").html(
-        "<a href='" + newsArticles.results[0].amp_url + "'>" + newsArticles.results[0].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[1].amp_url + "'>" + newsArticles.results[1].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[2].amp_url + "'>" + newsArticles.results[2].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[3].amp_url + "'>" + newsArticles.results[3].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[4].amp_url + "'>" + newsArticles.results[4].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[5].amp_url + "'>" + newsArticles.results[5].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[6].amp_url + "'>" + newsArticles.results[6].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[7].amp_url + "'>" + newsArticles.results[7].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[8].amp_url + "'>" + newsArticles.results[8].title + "</a>" + "<br>" +
-        "<a href='" + newsArticles.results[9].amp_url + "'>" + newsArticles.results[9].title + "</a>"
-    )
+var displayNews = function(newsArticles){
+
+    let res   = newsArticles.results
+    let block = ''
+    for(let i=0; i< res.length; i++){
+       block += 
+        `<div class="border-2 p-4 lg:w-1/2 cursor-pointer" onclick="window.location.href = '${res[i].article_url}'">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+       <img alt=${res[i].title} class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src=${res[i].image_url}>
+          <div class="flex-grow sm:pl-8">
+            <h3 class="text-gray-500 mb-3">${res[i].author}</h3>
+            <p class="mb-4">${res[i].title}</p>
+    
+          </div>
+        </div>
+      </div>
+      `
+    }
+
+    $(".news-links").html(block)
+
 };
+
+
 
 //Calling fetch function
 fetchNews();
   
   });
-
-
 
 
 
