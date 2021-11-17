@@ -10,11 +10,12 @@ function getValue() {
   fetchStockDetails(stockName)
 }
 
-function fetchStockDetails(stockName) {
+var axios = require("axios").default;
+
 var options = {
   method: 'GET',
-  url: 'https://yfapi.net/v1/finance/trending/US',
-  params: { region: "us", lang: "en", query: stockName},
+  url: 'https://yfapi.net/v1/finance/trending',
+  params: {region: "us", lang: "en", query: stockSymbol },
   headers: {
     'x-api-key': 'yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk'
   }
@@ -55,4 +56,4 @@ for (var i = 0; i < hashes.length; i++) {
   vars[hash[0]] = hash[1]
 }
 return vars
-}};
+}
