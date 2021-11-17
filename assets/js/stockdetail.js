@@ -9,7 +9,6 @@ let apiKey = "2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5"
 $(document).ready(getValue)
 
 function getValue() {
-  let loc = window.location
   let result = getUrlVars()
   let stockName = result["stock"]
   console.log("stock", stockName)
@@ -22,7 +21,7 @@ function fetchStockDetails(stockName) {
     url: "https://yfapi.net/v6/finance/autocomplete",
     params: { region: "us", lang: "en", query: stockName },
     headers: {
-      "x-api-key": "apiKey",
+      "x-api-key": apiKey,
     },
   }
 
@@ -149,3 +148,5 @@ function getUrlVars() {
   }
   return vars
 }
+
+
