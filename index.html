@@ -52,21 +52,6 @@
                   To get started, enter a stock ticker (Example: TSLA for Tesla) to fetch the price quote & chart
                   <br>
               </p>
-              <form> 
-                <fieldset> 
-                <legend>Common Stock Ticker Symbols</legend> 
-                <label>Tesla (TSLA) &#8226</label>
-                <label>Uber (UBER) &#8226</label>
-                <label>Google (GOOG) &#8226</label>
-                <label>Amazon (AMZN) &#8226</label>
-                <label>Meta (FB) &#8226</label> <br>
-                <label>Microsoft (MSFT) &#8226</label>
-                <label>JP Morgan (JPM) &#8226</label>
-                <label>Alibaba Group (BABA) &#8226</label>
-                <label>Walmart (WMT) &#8226</label>
-                <label>Netflix (WMT)</label>
-                </fieldset> 
-              </form>
           </div>
         </div>
         </section> 
@@ -85,17 +70,21 @@
       </nav>
 
     <section class="stock-trending">
-      <h2 class="stock-news">Stock News
-        <div class="text-black-600 body-font">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="text-center mb-20">
-            <h1 class="long-symbol-name">
-              Trending Stocks Row
-              <p class="symbol-name">${data.symbol</p>
-            </h1>
-          </div>
+      <div class="stock-news">
+        <h2>Stock News</h2>
+        <div class="news-links">
         </div>
-      </h2> 
+      </div>
+          <div class="text-black-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="text-center mb-20">
+              <h1 class="long-symbol-name">
+                Trending Stocks Row
+                <p class="symbol-name">${data.symbol</p>
+              </h1>
+            </div>
+          </div>
+
     </section>
 
     <footer class="footer-main"> 
@@ -122,7 +111,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/secondscript.js"></script>
-    
+    <script src="assets/js/news.js"></script>
 
   </body>
   
