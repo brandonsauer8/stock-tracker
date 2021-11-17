@@ -22,7 +22,7 @@ function fetchStockDetails(stockName) {
     url: "https://yfapi.net/v6/finance/autocomplete",
     params: { region: "us", lang: "en", query: stockName },
     headers: {
-      "x-api-key": "XqHD0VzaV3InJ7ayecPd7DPJPwE6GoK7VDiJhmH1",
+      "x-api-key": "2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5",
     },
   }
 
