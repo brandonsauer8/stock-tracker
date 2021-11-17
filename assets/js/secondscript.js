@@ -10,11 +10,12 @@ function getValue() {
   fetchStockDetails(stockName)
 }
 
-function fetchStockDetails(stockName) {
+var axios = require("axios").default;
+
 var options = {
   method: 'GET',
-  url: 'https://yfapi.net/v1/finance/trending/US',
-  params: { region: "us", lang: "en", query: stockName},
+  url: 'https://yfapi.net/v11/finance/quoteSummary/AAPL',
+  params: {modules: 'defaultKeyStatistics,assetProfile'},
   headers: {
     'x-api-key': 'yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk'
   }
