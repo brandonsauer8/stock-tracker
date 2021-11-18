@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" 
     href="https://unpkg.com/spectre.css/dist/spectre.min.css"/>
 
@@ -20,18 +25,6 @@
     
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script>
-      $(function() {
-	$("#visible").click(function() {
-	    $('#invisible').toggleClass("show");
-	  });  
-	});
-    </script>
-    <style>
-      .hide{display:none;}
-      .show{display:block;}
-    </style>
 
     <title>Stock Tracker</title>
   </head>
@@ -71,46 +64,41 @@
 
     <section class="stock-trending">
       <div class="stock-news">
-        <h2>Stock News</h2>
-        <div class="news-links">
-        </div>
-      </div>
-          <div class="text-black-600 body-font">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="text-center mb-20">
-              <h1 class="long-symbol-name">
-                Trending Stocks Row
-                <p class="symbol-name">${data.symbol</p>
-              </h1>
-            </div>
-          </div>
+        <h2 class="news-header">Stock News</h2>
+ 
 
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+    
+            <div class="flex flex-wrap -m-4 news-links"></div>
+      
+            
+          </div>
+        </section>
+
+      </div>
     </section>
 
     <footer class="footer-main"> 
-      <h3 class="subscribe-here">Subscribe for latest updates</h3>
-  
-      <div class="contact-info">
-      <p>Enter Email
-       <input type="email" id="email"
-       pattern=".+@globex\.com" size="30" required></p>
-  
-       <p>Phone Number
-           <input type="text" id="number">
-       </p>
-  
-       <p>
-           <input id="visible" type="submit" value="Send Request">
-          </p>
-          <p id="invisible" class="hide"> Submitted</p>
-      </div>
+
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="our-team">OUR TEAM</h1>
+            <p class="team-members">Nadia A Alamgir | Brandon Sauer | Manpreet Singh | Eric Furukawa</p>
+          </div>
+       
+        </div>
+      </section>
+
+
   
   </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/secondscript.js"></script>
     <script src="assets/js/news.js"></script>
 
   </body>

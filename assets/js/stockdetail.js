@@ -1,15 +1,19 @@
 let apiKey = "2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5"
 
-// EXTRA API KEYS
+// EXTRA API KEYS FOR STOCK DETAIL:
 // 2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5
 // YvOamXCJ3f9vTVoV8zbHk3xtPqkf6K8x2aR22hXt
 // XqHD0VzaV3InJ7ayecPd7DPJPwE6GoK7VDiJhmH1
 // yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk
 
+
+// API KEY FOR TRENDING NEWS:
+// 20270693ff21432aa5196b0a968a84dd
+// https://newsapi.org/
+
 $(document).ready(getValue)
 
 function getValue() {
-  let loc = window.location
   let result = getUrlVars()
   let stockName = result["stock"]
   console.log("stock", stockName)
@@ -22,7 +26,7 @@ function fetchStockDetails(stockName) {
     url: "https://yfapi.net/v6/finance/autocomplete",
     params: { region: "us", lang: "en", query: stockName },
     headers: {
-      "x-api-key": "yRbGmb9wfwaWYv2NqP91C1NtIeTe2JUo8LxsQ9wk",
+      "x-api-key": apiKey,
     },
   }
 
@@ -149,3 +153,5 @@ function getUrlVars() {
   }
   return vars
 }
+
+
