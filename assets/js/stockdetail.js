@@ -11,8 +11,12 @@ let apiKey = "2Sk7vlX6Ov6wBUQrWi5bNu2KVhwXcCl5qrKe5jv5"
 // 20270693ff21432aa5196b0a968a84dd
 // https://newsapi.org/
 
+
+//one doxument id ready call the get value function
 $(document).ready(getValue)
 
+
+//below function gets query params from the url string
 function getValue() {
   let result = getUrlVars()
   let stockName = result["stock"]
@@ -20,6 +24,7 @@ function getValue() {
   fetchStockDetails(stockName)
 }
 
+//The function below collects list of stocks that are similiar to query string.
 function fetchStockDetails(stockName) {
   var options = {
     method: "GET",
@@ -44,6 +49,7 @@ function fetchStockDetails(stockName) {
     })
 }
 
+//The function below works to bring the complete detail of searched stocks.
 function bringExtraStockDetails(stockSymbol) {
   var options = {
     method: "GET",
@@ -66,6 +72,7 @@ function bringExtraStockDetails(stockSymbol) {
     })
 }
 
+//The function below inserts the html with dynamic data which we receive through stockdetail api.
 function printStockDetails(data) {
   $(".stock-details").html(
     `
