@@ -26,10 +26,9 @@ var displayNews = function(newsArticles){
         `<div class="border-2 p-4 lg:w-1/2 cursor-pointer" onclick="window.location.href = '${res[i].article_url}'">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
        <img alt=${res[i].title} class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src=${res[i].image_url}>
-          <div class="flex-grow sm:pl-8">
+          <div class="flex-grow">
             <h3 class="text-gray-500 mb-3">${res[i].author}</h3>
             <p class="mb-4">${res[i].title}</p>
-    
           </div>
         </div>
       </div>
