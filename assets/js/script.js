@@ -7,8 +7,8 @@ function initRun() {
 };
 
 // add company name to companyArray
-var storeCompany = function (city) {
-  companyArray.push(city);
+var storeCompany = function (company) {
+  companyArray.push(company);
   companyStorage();
 };
 
