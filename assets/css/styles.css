@@ -6,6 +6,11 @@
   color: #5755d9;
 }
 
+.logo {
+  height: 300px;
+  display: initial;
+}
+
 .instructions {
   min-height: 100px;
 }
