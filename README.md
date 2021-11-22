@@ -1,5 +1,5 @@
 
-# Weather dashboard
+# Stock Tracker
 
 A website offers real time updates to various company stock information and news based on the user's input.
 
